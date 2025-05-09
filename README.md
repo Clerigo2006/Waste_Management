@@ -1,4 +1,4 @@
-# Waste_Management
+# Waste_Management BSIT-1D Group_2
 
 Community Problem Description that are trying to be solve:
 
