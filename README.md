@@ -1,6 +1,6 @@
 # Waste_Management
 
-Community Problem Description the are trying to be solve:
+Community Problem Description that are trying to be solve:
 
 A. Traditional and Manual Waste Monitoring. Current waste tracking is primarily **paper-based, making it prone to data loss, human error, and limited accessibility**. Without a centralized system, it becomes difficult to track waste collection schedules, frequency, volume, and area coverage efficiently.
 
