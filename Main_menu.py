@@ -3,7 +3,6 @@ import msvcrt as m
 import LGU_MENU
 import Residents_Menu
 
-
 def clear():
     os.system('cls')
 
@@ -45,7 +44,8 @@ def select1():
         elif select == 'B':
             print("Exiting...")
             m.getch()
-            break
+            clear()
+            exit()
         else:
             print("Invalid Choice...")
             m.getch()
