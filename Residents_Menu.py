@@ -3,16 +3,22 @@ import msvcrt as m
 import Main_menu
 import LGU_MENU
 import datetime
+import Show_Sched
+import Notice
+import Waste_Collect_Funct
 
 Reports_File = "Reports_File.txt"
 
+#clear screen
 def clear():
     clear = os.system('cls')
 
+#line
 def border():
     for _ in range(120):
         print('-',end='')
 
+# input waste Report or issue
 def Waste_Report():
     Main_menu.border2()
     print('{:^170}'.format("Waste - Report"))
@@ -43,6 +49,7 @@ def Waste_Report():
     print("\n\n")
     print('{:^170}'.format("Report submitted successfully!"))
 
+# delete a waste report 
 def delete_report():
     Main_menu.border2()
     print('{:^170}'.format("Waste Report History"))
@@ -101,6 +108,7 @@ def delete_report():
     print('{:^170}'.format("Press enter key to return to the menu..."))
     m.getch()
 
+# View history report or issue
 def View_Report():
     Main_menu.border2()
     print('{:^170}'.format("Waste Report History"))
@@ -132,13 +140,12 @@ def View_Report():
     for i, line in enumerate(reports):
             Time, Name_Reporter, Location, Issue, Status = line.strip().split("|")
             print(f"{'':<12} {i + 1:<5} {Time:<23} {Name_Reporter:<32} {Location:<35} {Issue:<45} {Status:}")
-            # print("")
 
-    # print(f"─" * 178)
     print("\n")
     print('{:^170}'.format("Press enter key to return to the menu..."))
     m.getch()
 
+# Waste report Menu
 def Waste_Report_Menu():
     while True:
         clear()
@@ -176,6 +183,7 @@ def Waste_Report_Menu():
             print("Invalid choice. Please try again.")
             m.getch()
 
+# Residents Main menu
 def Menu():
     while True:
         os.system('cls')
@@ -200,15 +208,15 @@ def Menu():
             m.getch()
         elif choice == 'B':
             clear()
-            LGU_MENU.View_Schedule()
+            Show_Sched.View_Schedule()
             m.getch()
         elif choice == 'C':
             clear()
-            LGU_MENU.View_Announcement()
+            Notice.View_Notice()
             m.getch()
         elif choice == 'D':
             clear()
-            LGU_MENU.View_Collection_List()
+            Waste_Collect_Funct.View_Collection_List()
             m.getch()
         elif choice == 'E':  
             print("Logging out...")
